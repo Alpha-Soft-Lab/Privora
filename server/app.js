@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import roomRoutes from './src/routes/room.routes.js';
@@ -14,7 +15,7 @@ app.use(express.json());
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/api/rooms', roomRoutes);
 
-if (env.nodeEnv === 'production') {
+if (env.nodeEnv === 'production' && fs.existsSync(distPath)) {
   app.use(express.static(distPath));
   app.get('*', (req, res) => res.sendFile(path.join(distPath, 'index.html')));
 }
