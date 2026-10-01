@@ -5,6 +5,6 @@ export const env = {
   nodeEnv: process.env.NODE_ENV,
   mongoUri: process.env.MONGODB_URI,
   clientOrigin: process.env.CLIENT_ORIGIN,
-  maxParticipants: Number(process.env.MAX_PARTICIPANTS) || 2,
-  roomTtlHours: Number(process.env.ROOM_TTL_HOURS) || 24,
+  maxParticipants: Number(process.env.MAX_PARTICIPANTS),
+  roomTtlHours: Number(process.env.ROOM_TTL_HOURS),
 };
