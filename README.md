@@ -113,7 +113,7 @@ Privora/
 ### 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/Privora.git
+https://github.com/Alpha-Soft-Lab/Privora.git
 cd Privora
 ```
 
